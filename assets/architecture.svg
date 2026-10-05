@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" width="100%" height="100%" style="background:#0a0c10; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c10" />
+      <stop offset="100%" stop-color="#12161f" />
+    </linearGradient>
+    <linearGradient id="cardGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3d2a14" />
+      <stop offset="100%" stop-color="#1f150a" />
+    </linearGradient>
+    <linearGradient id="cardBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#142a3d" />
+      <stop offset="100%" stop-color="#0a151f" />
+    </linearGradient>
+    <linearGradient id="cardPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a143d" />
+      <stop offset="100%" stop-color="#150a1f" />
+    </linearGradient>
+    <linearGradient id="cardGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#143d22" />
+      <stop offset="100%" stop-color="#0a1f11" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.45" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="620" fill="url(#bgGrad)" />
+
+  <!-- Header -->
+  <text x="50" y="55" font-size="24" font-weight="700" fill="#f8fafc" letter-spacing="-0.5">ios-production-templates</text>
+  <text x="50" y="80" font-size="13" font-weight="400" fill="#94a3b8">Battle-Tested Architecture Patterns &amp; Feature Flows Ready for Production App Stores</text>
+
+  <!-- 4 Big Architecture Blocks -->
+  <!-- Block 1: StoreKit 2 Paywall -->
+  <g filter="url(#shadow)">
+    <rect x="50" y="115" width="430" height="215" rx="14" fill="url(#cardGold)" stroke="#fbbf24" stroke-opacity="0.3" stroke-width="1.5" />
+    <circle cx="85" cy="150" r="16" fill="#fbbf24" fill-opacity="0.15" />
+    <text x="85" y="156" font-size="15" font-weight="700" fill="#fbbf24" text-anchor="middle">👑</text>
+    <text x="115" y="156" font-size="16" font-weight="600" fill="#f8fafc">In-App Purchase &amp; Paywall</text>
+
+    <text x="75" y="195" font-size="12" fill="#cbd5e1">• Multi-tier subscription comparison (Monthly, Annual, Lifetime)</text>
+    <text x="75" y="220" font-size="12" fill="#cbd5e1">• Feature checklist highlights with dynamic icons</text>
+    <text x="75" y="245" font-size="12" fill="#cbd5e1">• Restore purchases &amp; StoreKit 2 async transaction handling</text>
+    <text x="75" y="270" font-size="12" fill="#cbd5e1">• Spring-animated tier selection &amp; popularity badges</text>
+    <text x="75" y="300" font-size="11" fill="#fbbf24">PaywallView(tiers:features:) { await purchase($0) }</text>
+  </g>
+
+  <!-- Block 2: Onboarding Flow Wizard -->
+  <g filter="url(#shadow)">
+    <rect x="520" y="115" width="430" height="215" rx="14" fill="url(#cardBlue)" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1.5" />
+    <circle cx="555" cy="150" r="16" fill="#38bdf8" fill-opacity="0.15" />
+    <text x="555" y="156" font-size="15" font-weight="700" fill="#38bdf8" text-anchor="middle">🚀</text>
+    <text x="585" y="156" font-size="16" font-weight="600" fill="#f8fafc">Onboarding Flow Wizard</text>
+
+    <text x="545" y="195" font-size="12" fill="#cbd5e1">• Multi-step feature discovery with spring carousel animation</text>
+    <text x="545" y="220" font-size="12" fill="#cbd5e1">• Expanding active page capsule indicators</text>
+    <text x="545" y="245" font-size="12" fill="#cbd5e1">• Top-right skip action &amp; final step 'Get Started' transition</text>
+    <text x="545" y="270" font-size="12" fill="#cbd5e1">• Full-screen safe area compliance with custom branding</text>
+    <text x="545" y="300" font-size="11" fill="#38bdf8">OnboardingView(steps:) { hasCompleted = true }</text>
+  </g>
+
+  <!-- Block 3: Navigation Coordinator -->
+  <g filter="url(#shadow)">
+    <rect x="50" y="360" width="430" height="225" rx="14" fill="url(#cardPurple)" stroke="#c084fc" stroke-opacity="0.3" stroke-width="1.5" />
+    <circle cx="85" cy="395" r="16" fill="#c084fc" fill-opacity="0.15" />
+    <text x="85" y="401" font-size="15" font-weight="700" fill="#c084fc" text-anchor="middle">🧭</text>
+    <text x="115" y="401" font-size="16" font-weight="600" fill="#f8fafc">Decoupled Navigation Coordinator</text>
+
+    <text x="75" y="440" font-size="12" fill="#cbd5e1">• Programmatic push, pop, and popToRoot navigation stack</text>
+    <text x="75" y="465" font-size="12" fill="#cbd5e1">• Decoupled sheet presentation &amp; fullScreenCover orchestration</text>
+    <text x="75" y="490" font-size="12" fill="#cbd5e1">• Protocol-driven AppRoute with deep-link URL parsing support</text>
+    <text x="75" y="515" font-size="12" fill="#cbd5e1">• CoordinatorHost container keeping views free of navigation logic</text>
+    <text x="75" y="550" font-size="11" fill="#c084fc">coordinator.push(.detail(id))</text>
+  </g>
+
+  <!-- Block 4: Offline-First Sync Engine -->
+  <g filter="url(#shadow)">
+    <rect x="520" y="360" width="430" height="225" rx="14" fill="url(#cardGreen)" stroke="#34d399" stroke-opacity="0.3" stroke-width="1.5" />
+    <circle cx="555" cy="395" r="16" fill="#34d399" fill-opacity="0.15" />
+    <text x="555" y="401" font-size="15" font-weight="700" fill="#34d399" text-anchor="middle">🔄</text>
+    <text x="585" y="401" font-size="16" font-weight="600" fill="#f8fafc">Offline-First Sync Engine</text>
+
+    <text x="545" y="440" font-size="12" fill="#cbd5e1">• Actor-isolated mutation queue with dirty flag tracking</text>
+    <text x="545" y="465" font-size="12" fill="#cbd5e1">• 2-way sync: push dirty local records then pull remote updates</text>
+    <text x="545" y="490" font-size="12" fill="#cbd5e1">• Conflict handling and timestamp-based reconciliation</text>
+    <text x="545" y="515" font-size="12" fill="#cbd5e1">• Resilient network failure retries without duplicate payloads</text>
+    <text x="545" y="550" font-size="11" fill="#34d399">await engine.sync(push: { ... }, pull: { ... })</text>
+  </g>
+</svg>
